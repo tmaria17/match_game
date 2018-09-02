@@ -1,4 +1,4 @@
-class BoardGame
-validates_presecence_of :title
+class BoardGame < ApplicationRecord
+validates_presence_of :title
 
 end
