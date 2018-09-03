@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  resources :boardgames
+  resources :users do
+    resources :board_games
+  end
+
 end
