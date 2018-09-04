@@ -5,6 +5,6 @@ describe BoardGame, type: :model do
   end
 
   describe 'relationships' do
-    it {should belong_to(:user)}
+    it {should have_many(:users).through(:user_board_games)}
   end
 end
