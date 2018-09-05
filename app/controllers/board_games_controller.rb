@@ -8,18 +8,15 @@ class BoardGamesController < ApplicationController
     @game = BoardGame.find(params[:id])
     @people_who_own_this_game = @game.users.joins(:user_board_games).where("user_board_games.own_or_play=?", "own").uniq
     @people_who_want_to_play_this_game = @game.users.joins(:user_board_games).where("user_board_games.own_or_play=?", "play").uniq
-
-     #binding.pry
   end
 
   def new
+    @user = User.find(params[:user_id])
     @game = BoardGame.new
   end
 
   def create
-    #@user = User.find(params[:user_id])
-    @game = BoardGame.new
-    @game.save
+    @game = BoardGame.create(board_game_params)
     redirect_to board_games_path
   end
 
