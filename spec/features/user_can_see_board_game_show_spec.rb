@@ -15,7 +15,7 @@ describe 'user visits game show page' do
 
 
     click_on game_1.title
-    save_and_open_page
+    #save_and_open_page
     expect(current_path).to eq(board_game_path(game_1))
     expect(page).to have_content(user.username)
 

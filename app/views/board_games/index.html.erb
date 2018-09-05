@@ -1,5 +1,5 @@
-<h1>Your Games</h2>
-<% @user.user_board_games.each do |game| %>
-<li><%= link_to game.board_game.title, board_game_path(game) %></li>
+<h1> Games</h2>
+<% @boardgames.each do |game| %>
+<li><%= link_to game.title, board_game_path(game) %></li>
 
     <%end %>
