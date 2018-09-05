@@ -1,0 +1,13 @@
+<h1><%=@user.username %></h1>
+
+<div class="own">
+  <% @games_owned.each do |game| %>
+  <li>  <%=link_to game.title, board_game_path(game) %> </li>
+      <%end %>
+</div>
+
+<div class="play">
+  <% @games_to_play.each do |game| %>
+  <li>  <%= link_to game.title, board_game_path(game) %> </li>
+      <%end %>
+</div>

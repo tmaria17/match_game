@@ -8,7 +8,11 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
+<p>
+    <%= link_to 'Sign up to be a new user', new_user_path%>
+    <%= link_to 'I already have an account', login_path%>
+    <%= link_to 'Let me out', logout_path%>
+  </p>
   <body>
     <%= yield %>
   </body>

@@ -9,4 +9,8 @@ class BoardGamesController < ApplicationController
 
   end
 
+  private
+  def board_game_params
+    params.require(:board_game).permit(:title)
+  end
 end

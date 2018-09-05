@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_04_221201) do
+ActiveRecord::Schema.define(version: 2018_09_05_014631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_09_04_221201) do
   create_table "user_board_games", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "board_game_id"
+    t.string "own_or_play"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["board_game_id"], name: "index_user_board_games_on_board_game_id"
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 2018_09_04_221201) do
     t.datetime "updated_at", null: false
     t.string "username"
     t.string "password_digest"
+    t.integer "role"
   end
 
 end
