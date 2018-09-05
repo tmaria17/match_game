@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+game = BoardGame.create(title: "Zombie Dice")
+game = BoardGame.create(title: "Pandemic")
+game = BoardGame.create(title: "Gloomhaven")
+game = BoardGame.create(title: "Connect Four")
+game = BoardGame.create(title: "Ticket to Ride")
+game = BoardGame.create(title: "Sherlock Holmes: Consulting Detective")
+game = BoardGame.create(title: "Exploding Kittens)

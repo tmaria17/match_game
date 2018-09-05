@@ -7,4 +7,15 @@
 <%= f.text_field :title %>
  <%= f.submit %>
  <%end %>
+
+ <% elsif current_user %>
+
+  <%= form_for [@user_board_game] do |f| %>
+  <%= f.label :title %>
+  <%= f.collection_select :board_game_id, BoardGame.all, :id, :title%>
+  <%= f.label :own_or_play %>
+  <%= f.text_field :own_or_play %>
+  <%= f.submit "Add Game" %>
+  <% end %>
+
   <%end %>
