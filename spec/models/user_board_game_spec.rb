@@ -5,7 +5,7 @@ describe UserBoardGame, type: :model do
   end
 
   describe 'relationships' do
-    it { should belong_to(:user) }
-    it { should belong_to(:board_game) }
+    it { should belong_to(:user)}
+    it { should belong_to(:board_game)}
   end
 end

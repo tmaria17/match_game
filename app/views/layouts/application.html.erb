@@ -4,15 +4,17 @@
     <title>MatchGame</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-<p>
+<nav>
+
     <%= link_to 'Sign up to be a new user', new_user_path%>
     <%= link_to 'I already have an account', login_path%>
     <%= link_to 'Let me out', logout_path%>
-  </p>
+  </nav>
   <body>
     <%= yield %>
   </body>

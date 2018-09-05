@@ -15,13 +15,20 @@ describe 'user visits game show page' do
 
 
     click_on game_1.title
-    #save_and_open_page
+
     expect(current_path).to eq(board_game_path(game_1))
-    expect(page).to have_content(user.username)
 
+    within(".own") do
+      expect(page).to have_content(user.username)
+    end
+
+    within(".play") do
+      expect(page).to have_content(user_kittens.username)
+    end
+
+    click_on "Sean70"
+    expect(current_path).to eq(user_path(user_kittens))
+    expect(page).to have_content(user_kittens.username)
+    expect(page).to_not have_content(user.username)
   end
-
-
-
-
 end
