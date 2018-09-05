@@ -34,4 +34,20 @@ describe 'registration and login' do
       expect(page).to have_content("#{user.username}")
     end
   end
+  describe 'logout' do
+    it 'allows a user to logout'do
+    user= User.create(username: "Aboringusername", location: "Denver", password: "dogsrthebest")
+    visit new_user_path
+    click_on 'I already have an account'
+    expect(current_path).to eq(login_path)
+
+    fill_in :username, with: user.username
+    fill_in :password, with: user.password
+
+    click_on 'Log in'
+    expect(current_path).to eq(user_path(user))
+    click_on 'Let me out'
+    expect(page).to_not have_content("#{user.username}")
+    end
+  end
 end
