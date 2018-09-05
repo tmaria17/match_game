@@ -1,8 +1,8 @@
-<h1>Sign up to be a new user</h1>
-<%= form_for [@user] do |f|%>
-<%= f.label :username %>
-<%= f.text_field :username %>
- <%= f.label :password %>
- <%= f.password_field :password  %>
- <%= f.submit %>
+<%= form_tag login_path do %>
+
+<%= label_tag :username %>
+<%= text_field_tag :username %>
+ <%= label_tag :password %>
+ <%= password_field_tag :password  %>
+ <%= submit_tag "Log in" %>
  <%end %>
