@@ -22,13 +22,5 @@ describe 'user visits their user_page' do
     within(".play") do
       expect(page).to have_content(game_3.title)
     end
-
-    #save_and_open_page
-
-
-
   end
-
-
-
 end
