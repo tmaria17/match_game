@@ -3,8 +3,8 @@ class CreateUserBoardGames < ActiveRecord::Migration[5.2]
       create_table :user_board_games do |t|
         t.belongs_to :user, index: true
         t.belongs_to :board_game, index: true
-
-         t.timestamps
+        t.string :own_or_play
+        t.timestamps
 
       end
     end

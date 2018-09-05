@@ -16,6 +16,8 @@ class UsersController < ApplicationController
 
     def show
       @user = User.find(params[:id])
+      @games_owned = @user.board_games.joins(:user_board_games).where("user_board_games.own_or_play=?", "own")
+      @games_to_play = @user.board_games.joins(:user_board_games).where("user_board_games.own_or_play=?", "play")
     end
 
     def index
