@@ -1,2 +1,14 @@
+<h1>People who own <%= @game.title  %> </h1>
+
+<div class="own">
+<%@people_who_own_this_game.each do |user|%>
+<li><%= user.username %></li>
+<%end %>
+</div>
+
+<div class="play">
 <h1>People who want to play <%= @game.title  %> </h1>
- 
+<%@people_who_want_to_play_this_game.each do |user|%>
+<li><%= user.username %></li>
+<%end %>
+</div>
