@@ -12,6 +12,17 @@ class BoardGamesController < ApplicationController
      #binding.pry
   end
 
+  def new
+    @game = BoardGame.new
+  end
+
+  def create
+    #@user = User.find(params[:user_id])
+    @game = BoardGame.new
+    @game.save
+    redirect_to board_games_path
+  end
+
   private
   def board_game_params
     params.require(:board_game).permit(:title)

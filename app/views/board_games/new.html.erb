@@ -1,1 +1,13 @@
-<h2>Make a Game</h2>
+<h2>New Game</h2>
+
+<% if current_admin? %>
+  
+<%= form_for [@game] do |f|%>
+<%= f.label :title %>
+<%= f.text_field :title %>
+ <%= f.submit %>
+ <%end %>
+
+<% elsif current_user %>
+ <h> Not Yet</h>
+<% end %>
