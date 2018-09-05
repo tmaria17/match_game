@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'user visits their game index' do
+describe 'user visits their user_page' do
   it 'should display all games the user owns' do
     user= User.create(username: "Trevor5", location: "Denver", password: "bat")
     game_1 = BoardGame.create!(title: "Gloomhaven")
