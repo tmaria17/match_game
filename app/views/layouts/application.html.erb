@@ -14,6 +14,7 @@
     <%= link_to 'Sign up to be a new user', new_user_path%>
     <%= link_to 'I already have an account', login_path%>
     <%= link_to 'Let me out', logout_path%>
+    <%= link_to 'New Game', new_user_board_game_path(current_user) %>
   </nav>
   <body>
     <%= yield %>
