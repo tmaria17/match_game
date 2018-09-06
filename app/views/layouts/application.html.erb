@@ -4,19 +4,23 @@
     <title>MatchGame</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-<nav>
-
+  <body>
+  <nav>
+    <% if current_user %>
+    <%= link_to "Add a Board Game", new_user_board_game_path(current_user.id) %>
+    <%= link_to 'I already have an account', login_path%>
+    <%= link_to 'Let me out', logout_path%>
+    <%  else%>
     <%= link_to 'Sign up to be a new user', new_user_path%>
     <%= link_to 'I already have an account', login_path%>
     <%= link_to 'Let me out', logout_path%>
-    <%= link_to 'New Game', new_user_board_game_path(current_user) %>
+    <% end %>
+
   </nav>
-  <body>
     <%= yield %>
   </body>
 </html>

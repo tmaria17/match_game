@@ -1,4 +1,4 @@
-<h1>People who own <%= @game.title  %> </h1>
+<h2>People who own <%= @game.title  %> </h2>
 
 <div class="own">
 <%@people_who_own_this_game.each do |user|%>
@@ -6,7 +6,7 @@
 <%end %>
 </div>
 
-<h1>People who want to play <%= @game.title  %> </h1>
+<h2>People who want to play <%= @game.title  %> </h2>
 
 <div class="play">
 <%@people_who_want_to_play_this_game.each do |user|%>

@@ -1,5 +1,6 @@
 <h1> Games</h2>
 <% @boardgames.each do |game| %>
+<li><img src="http://placekitten.com/200/300" alt="image placeholder"/> </li>
 <li><%= link_to game.title, board_game_path(game) %></li>
 
     <%end %>
