@@ -6,8 +6,9 @@
 <%end %>
 </div>
 
-<div class="play">
 <h1>People who want to play <%= @game.title  %> </h1>
+
+<div class="play">
 <%@people_who_want_to_play_this_game.each do |user|%>
 <li><%= link_to user.username, user_path(user) %></li>
 <%end %>
